@@ -1,4 +1,3 @@
-# detect.py (updated)
 from ultralytics import YOLO
 import cv2
 import os
@@ -30,7 +29,7 @@ def detect_objects(image_path):
 
     return annotated_frame, obj_count, crops
 
-# detect.py (append this below detect_objects)
+
 def detect_video(input_path, output_path="output.mp4"):
     cap = cv2.VideoCapture(input_path)
     width = int(cap.get(3))
@@ -52,3 +51,4 @@ def detect_video(input_path, output_path="output.mp4"):
     cap.release()
     out.release()
     return output_path
+
